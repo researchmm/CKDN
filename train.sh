@@ -1,0 +1,1 @@
+/azureml-envs/azureml_ad724e4532c0f171758f613b15052823/bin/python3 -m torch.distributed.launch --nproc_per_node=8 train.py ./data/ --color-jitter 0 --sched const --epochs 30 --warmup-epochs 5 --lr 0.16 --batch-size 8 -j 8 --output ./model --img-size 288  
