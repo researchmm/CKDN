@@ -14,7 +14,7 @@ import torch
 import torch.nn as nn
 import torchvision.utils
 import math
-import dpen
+import ckdn
 
 
 torch.backends.cudnn.benchmark = True
@@ -197,7 +197,7 @@ def main():
         logging.info('Training with a single process on %d GPUs.' % args.num_gpu)
 
     torch.manual_seed(args.seed + args.rank)
-    model = dpen.model()
+    model = ckdn.model()
     if args.local_rank == 0:
         logging.info('Model %s created, param count: %d' %
                      (args.model, sum([m.numel() for m in model.parameters()])))
