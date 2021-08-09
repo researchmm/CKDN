@@ -5,7 +5,7 @@ The official implementation of the ICCV2021 paper "Learning Conditional Knowledg
 
 Our trained model can be found in [Model](https://drive.google.com/file/d/13HzxPsRWdPC_CAsbvgMgU5IG_TKPVbNe/view?usp=sharing)
 
-The PIPAL dataset with our matched degraded images can be downloaded in [Data] (https://drive.google.com/file/d/13HzxPsRWdPC_CAsbvgMgU5IG_TKPVbNe/view?usp=sharing)
+The PIPAL dataset can be found in [Here](https://www.jasongt.com/projectpages/pipal.html); our matched degraded images can be downloaded in [Here](https://drive.google.com/file/d/1OMtWZupCwTo_Z-lI2Gywv9Ggexi9tt6K/view?usp=sharing). Please put all images into one folder.
 
 To train the model, please run:
 
