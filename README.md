@@ -20,7 +20,9 @@ To predict the quality score for an image/folder, please:
 >1. put degraded images into 'data_folder/degraded' and restored images into 'data_folder/restored' (with the same file name).
 >2. run: bash predict_score.sh
 
+## Credits
 
+This code is based on [pytorch-image-models](https://github.com/rwightman/pytorch-image-models)
 
 ## Citation
 
