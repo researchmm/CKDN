@@ -365,7 +365,7 @@ def train_epoch(epoch, model, loader, optimizer, args,
                     lam = np.random.beta(args.mixup, args.mixup)
                 input.mul_(lam).add_(1 - lam, input.flip(0))
                 target = mixup_target(target, args.num_classes, lam, args.smoothing)
-        output = model(input,target)
+        output = model(input)
         loss = loss_fn(output[:,0], output[:,1], output[:,2], output[:,3], target[:,0], target[:,1], epoch)
         if not args.distributed:
             losses_m.update(loss.item(), input.size(0))
@@ -453,7 +453,7 @@ def validate(model, loader, args, log_suffix=''):
                 input = input.cuda()
                 target = target.cuda()
 
-            output = model(input, target)[:,0]
+            output = model(input)[:,0]
             target = target[:,0]
             if isinstance(output, (tuple, list)):
                 output = output[0]
