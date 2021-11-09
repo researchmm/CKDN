@@ -202,7 +202,7 @@ class ResNet(nn.Module):
 
         return nn.Sequential(*layers)
 
-    def forward(self, x, target, extract=False):
+    def forward(self, x, extract=False):
 
         rest1, dist1, rest2, ref1 = torch.chunk(x,4,dim=1)
 
